@@ -14,6 +14,7 @@ import traceback
 import urllib
 from wsgiref import simple_server
 from wsgiref.util import FileWrapper   # for backwards compatibility
+from SocketServer import ThreadingMixIn
 
 import django
 from django.core.exceptions import ImproperlyConfigured
@@ -69,7 +70,7 @@ class ServerHandler(simple_server.ServerHandler, object):
         return ['\n'.join(traceback.format_exception(*sys.exc_info()))]
 
 
-class WSGIServer(simple_server.WSGIServer, object):
+class WSGIServer(ThreadingMixIn, simple_server.WSGIServer, object):
     """BaseHTTPServer that implements the Python WSGI protocol"""
 
     def __init__(self, *args, **kwargs):
