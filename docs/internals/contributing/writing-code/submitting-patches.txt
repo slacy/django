@@ -36,7 +36,7 @@ and time availability), claim it by following these steps:
     * Log into your account, if you haven't already, by clicking "Login" in
       the upper right of the ticket page.
 
-    * Claim the ticket by clicking the radio button next to "Accept ticket"
+    * Claim the ticket by clicking the radio button next to "reassign to..."
       near the bottom of the page, then clicking "Submit changes."
 
 .. _Create an account: https://www.djangoproject.com/accounts/register/
